@@ -1,0 +1,15 @@
+albumentations
+ffmpeg
+jupyter
+numpy
+opencv-python==3.4.2
+py-opencv==3.4.2
+python==3.6.9
+pip
+pytorch==1.4.0
+torchvision
+tqdm
+pandas
+tensorboardx==2.0
+efficientnet-pytorch
+scikit-learn
