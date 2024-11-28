@@ -2,7 +2,7 @@ albumentations
 ffmpeg
 jupyter
 numpy
-opencv-python=
+opencv-python
 py-opencv
 pytorch
 torchvision
