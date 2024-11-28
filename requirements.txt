@@ -11,3 +11,4 @@ tensorboardx
 efficientnet-pytorch
 scikit-learn
 matplotlib
+moviepy
