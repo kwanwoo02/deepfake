@@ -10,3 +10,4 @@ pandas
 tensorboardx
 efficientnet-pytorch
 scikit-learn
+matplotlib
