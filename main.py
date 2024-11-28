@@ -10,7 +10,6 @@ import tempfile  # 임시 파일 처리를 위한 모듈
 from scipy.special import expit
 import matplotlib.pyplot as plt
 import os 
-import moviepy.editor as mp
 import cv2
 
 # Configurations
