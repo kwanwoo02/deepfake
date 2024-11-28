@@ -17,7 +17,7 @@ import cv2
 org_dir_path = '/home/ubuntu/workspace/kwanwoo/capstone'
 net_model = 'EfficientNetAutoAttB4'
 train_db = 'DFDC'
-device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
+device = torch.device('cpu')
 face_policy = 'scale'
 face_size = 224
 frames_per_video = 32
@@ -69,11 +69,11 @@ def initialize_resources():
     """Initialize and load the model and BlazeFace detector."""
     # Load model
     model_url = weights.weight_url[f'{net_model}_{train_db}']
-    net = getattr(fornet, net_model)().eval().to(device)
+    net = getattr(fornet, net_model)().eval()
     net.load_state_dict(load_url(model_url, map_location=device, check_hash=True))
 
     # Load BlazeFace detector
-    facedet = BlazeFace().to(device)
+    facedet = BlazeFace()
     facedet.load_weights("blazeface/blazeface.pth")
     facedet.load_anchors("blazeface/anchors.npy")
 
@@ -104,7 +104,7 @@ def predict_faces(net, faces_t):
     import time
     start_time = time.time()
     with torch.no_grad():
-        predictions = net(faces_t.to(device)).cpu().numpy().flatten()
+        predictions = net(faces_t).cpu().numpy().flatten()
     end_time = time.time()
     print(end_time - start_time)
     return predictions
