@@ -3,7 +3,6 @@ ffmpeg
 jupyter
 numpy
 opencv-python
-py-opencv
 pytorch
 torchvision
 tqdm
