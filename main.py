@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import os 
 import cv2
 
-st.set_page_config(theme="dark")
 
 # Configurations
 org_dir_path = '/home/ubuntu/workspace/kwanwoo/capstone'
